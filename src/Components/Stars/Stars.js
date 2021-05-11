@@ -1,14 +1,19 @@
 import { Grid, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
-import axios from '../../Api/axios'
+// import {instance} from '../../Api/axios'
 import StarCard from './StarCard';
-
+import { StarsOutlined } from '@material-ui/icons';
+// import {instance} from '../../Api/axios'
+import axios from 'axios'
+export const instance = axios.create({
+    baseURL: 'http://localhost:2121/',
+})
 export default function Stars({ fetchUrl }) {
     const [stars, setStars] = useState([])
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(fetchUrl)
+            const request = await instance.get(fetchUrl)
             setStars(request.data)
             return request
         }

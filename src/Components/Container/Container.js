@@ -7,7 +7,7 @@ export default function Container() {
     return (
         <>
             <TabPanel value="1">
-                    <Universes fetchUrl='universes' />
+                    <Universes fetchUrl='http://localhost:2121/' />
             </TabPanel>
             <TabPanel value="2">
                     <Stars fetchUrl='stars' />
