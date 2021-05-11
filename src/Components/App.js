@@ -3,20 +3,24 @@ import React from 'react';
 import { TabContext } from '@material-ui/lab'
 import Header from './Header/Header';
 import Container from './Container/Container';
-import '../Styles/style.scss'
-
+import { ThemeProvider } from '@material-ui/styles';
+import { CssBaseline, Switch} from '@material-ui/core';
+import '../Styles/scss/style.scss'
+import { lightTheme } from '../Styles/themeOptions'
 
 export default function App() {
   const [tabValue, setTabValue] = React.useState('1')
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue)
   }
+
   return (
-    <>
+    <ThemeProvider theme={lightTheme}>
+      <CssBaseline />
       <TabContext value={tabValue} variant="fullWidth">
         <Header tabHandler={handleTabChange} />
         <Container />
       </TabContext>
-    </>
+    </ThemeProvider>
   )
 }
