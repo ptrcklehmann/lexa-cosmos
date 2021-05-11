@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { lightTheme, darkTheme } from '../../Styles/themeOptions'
+// import { useState } from 'react'
+// import { themeSchema } from '../../Styles/themeOptions'
 
-export default function useDarkMode(pageTheme) {
-    const [theme, setTheme] = useState(pageTheme);
+// export default function useDarkMode(mode) {
+//     const [theme, setTheme] = useState(mode);
 
-    const toggleDarkMode = () => {
-      const updatedTheme = (theme.palette.type === 'light') ? (darkTheme) : (lightTheme)
-      setTheme(updatedTheme)
-    };
-    return [theme, toggleDarkMode];
-}
+//     const toggleDarkMode = () => {
+//       const updatedTheme = (theme.palette.type === 'light') ? (darkTheme) : (lightTheme)
+//       setTheme(updatedTheme)
+//     };
+//     return [theme, toggleDarkMode];
+// }
