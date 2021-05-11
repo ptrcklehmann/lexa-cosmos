@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles/';
 
-export const themeOptions = createMuiTheme({
+const lightTheme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
@@ -16,6 +16,56 @@ export const themeOptions = createMuiTheme({
     text: {
       primary: '#183642',
       secondary: '#001845',
+    },
+  },
+  typography: {
+    subtitle1: {
+      fontFamily: 'Inter',
+    },
+    button: {
+      fontFamily: 'Inter',
+    },
+    fontFamily: 'Inter',
+    overline: {
+      fontFamily: 'Inter',
+    },
+    caption: {
+      fontFamily: 'Inter',
+    },
+    h5: {
+      fontFamily: 'Inter',
+    },
+    h4: {
+      fontWeight: 400,
+    },
+    h6: {
+      fontWeight: 500,
+    },
+  },
+  props: {
+    MuiAppBar: {
+      color: 'transparent',
+    },
+  },
+  spacing: 8,
+})
+
+const darkTheme = createMuiTheme({
+  palette: {
+    type: 'dark',
+    primary: {
+      main: '#e0ac9d',
+    },
+    secondary: {
+      main: '#6f2dbd',
+    },
+    background: {
+      default: '#231651',
+      paper: '#2e1760',
+    },
+    text: {
+      primary: '#50ffb1',
+      secondary: '#d6fff6',
     },
   },
   typography: {
@@ -49,3 +99,7 @@ export const themeOptions = createMuiTheme({
   },
   spacing: 8,
 });
+
+export const themeSchema = (theme) => {
+  return (theme === 'light') ? lightTheme : darkTheme
+}
