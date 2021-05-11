@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Card, CardActions, CardContent, Collapse, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/core'
 import { StarsOutlined } from '@material-ui/icons';
-import axios from '../../Api/axios'
-
+// import {instance} from '../../Api/axios'
+import axios from 'axios'
+export const instance = axios.create({
+    baseURL: 'http://localhost:2121/',
+})
 export default function UniverseCard(props) {
     const universe = props.info
     const [stars, setStars] = useState([])
@@ -10,7 +13,7 @@ export default function UniverseCard(props) {
 
     useEffect(() => {
         async function fetchData() {
-            await axios.request({
+            await instance.request({
                 method: 'GET',
                 url: 'http://localhost:2121/stars',
                 params: { universeId: universe.id }
