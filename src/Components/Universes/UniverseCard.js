@@ -51,7 +51,7 @@ export default function UniverseCard(props) {
                         </Collapse>
                     </CardContent>
                     <CardActions>
-                        <Button variant="contained" color='paper' onClick={handleExpandClick}>Show Stars</Button>
+                        <Button variant="contained" onClick={handleExpandClick}>Show Stars</Button>
                     </CardActions>
             </Card>
         </>

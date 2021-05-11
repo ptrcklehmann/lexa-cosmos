@@ -1,16 +1,10 @@
 import { Grid, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
 import axios from '../../Api/axios'
+import StarCard from './StarCard';
 
 export default function Stars({ fetchUrl }) {
     const [stars, setStars] = useState([])
-    const classes = useStyles();
-    const [drawerState, setState] = useState(false);
-    const [newStar, setNewStar] = useState({
-        id: uuidv4(),
-        maxSize: Number,
-        name: ''
-    })
 
     useEffect(() => {
         async function fetchData() {
@@ -23,7 +17,7 @@ export default function Stars({ fetchUrl }) {
 
     return (
         <>
-           <Typography className={classes.title} variant="h4" component="h2">
+           <Typography variant="h4" component="h2">
                 Stars
                 </Typography>
             <Grid container spacing={4}>

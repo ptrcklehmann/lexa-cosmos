@@ -1,6 +1,6 @@
 import React from 'react'
 import { TabList } from '@material-ui/lab'
-import { AppBar, Avatar, Tab, Toolbar } from '@material-ui/core';
+import { Avatar, Tab } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import logo from './logo.svg'
 
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Header(props) {
     const classes = useStyles()
     return (
-        <TabList classes={{ indicator: classes.indicator }} onChange={props.tabHandler}  aria-label="navbar tabs">
+        <TabList variant='fullWidth' classes={{ indicator: classes.indicator }} onChange={props.tabHandler}  aria-label="navbar tabs">
             <Tab icon={<Avatar alt="logo" src={logo}/>} disabled />
             <Tab label="Universes" value="1" />
             <Tab label='Stars' value="2" />

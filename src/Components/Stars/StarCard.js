@@ -57,7 +57,6 @@ export default function StarCard(props) {
                 <Button size="small">Learn More</Button>
             </CardActions>
         </Card>
-    ); 
         </>
     )
 }
