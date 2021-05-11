@@ -1,0 +1,136 @@
+{
+  "colors": [
+    "RED",
+    "BLUE",
+    "GREEN",
+    "YELLOW",
+    "BLACK"
+  ],
+  "stars": [
+    {
+      "color": "RED",
+      "id": 123,
+      "name": "Vega",
+      "universeId": 333
+    },
+    {
+      "color": "YELLOW",
+      "id": 321,
+      "name": "HE 0437-5439",
+      "universeId": 333
+    },
+    {
+      "color": "BLACK",
+      "id": 322,
+      "name": "HD 140283",
+      "universeId": 444
+    },
+    {
+      "color": "BLUE",
+      "id": 345,
+      "name": "Przybylski's Star",
+      "universeId": 333
+    },
+    {
+      "color": "YELLOW",
+      "id": 234,
+      "name": "Tabby's Star",
+      "universeId": 333
+    },
+    {
+      "color": "GREEN",
+      "id": 543,
+      "name": "PSR J1719-1438b",
+      "universeId": 444
+    },
+    {
+      "color": "BLACK",
+      "id": 544,
+      "name": "MIRA",
+      "universeId": 444
+    },
+    {
+      "color": "GREEN",
+      "id": 545,
+      "name": "EBLM J0555-57Ab",
+      "universeId": 444
+    }
+  ],
+  "universes": [
+    {
+      "id": 333,
+      "maxSize": 3,
+      "name": "Big universe"
+    },
+    {
+      "id": 444,
+      "maxSize": 4,
+      "name": "Ultra universe"
+    },
+    {
+      "id": "2bcd72ff-e580-41d9-95a1-5b8d49f0b14e",
+      "maxSize": 4,
+      "name": "Muitiverse"
+    },
+    {
+      "id": "c0cf52b8-ab03-4382-b389-f1849d280208",
+      "maxSize": 2,
+      "name": ""
+    },
+    {
+      "id": "48ce2ea2-6ed0-4575-a6db-ca88a823935f",
+      "maxSize": 5,
+      "name": "sfddf"
+    },
+    {
+      "id": "94753229-ef7d-4578-a927-3ddca5acd95d",
+      "maxSize": 2,
+      "name": "Belloverse"
+    },
+    {
+      "id": "10d8b99f-d88b-4462-84f9-5e50f1af359f",
+      "maxSize": 1,
+      "name": ""
+    },
+    {
+      "id": "b32a2340-1852-4477-9224-4f154fc55b2a",
+      "maxSize": 1,
+      "name": ""
+    },
+    {
+      "id": "afaf0428-1b69-462f-b118-d58d84ee330a",
+      "maxSize": 1,
+      "name": ""
+    },
+    {
+      "id": "36508304-9207-49fc-8e71-595b66a67f04",
+      "maxSize": 1,
+      "name": ""
+    },
+    {
+      "id": "c2994a90-5a4f-43ca-9d66-f65fcd4c2725",
+      "maxSize": 2,
+      "name": "#ÄOpop"
+    },
+    {
+      "id": "a4252466-6a45-444c-8c61-3f1890927745",
+      "maxSize": 1,
+      "name": ""
+    },
+    {
+      "id": "b1c5f02c-149f-444b-b833-922a1ec9f823",
+      "maxSize": 8,
+      "name": "Patrick"
+    },
+    {
+      "id": "a3cd0106-1ef1-46da-a2bb-36d6fafe6422",
+      "maxSize": 7,
+      "name": "Ponyo"
+    },
+    {
+      "id": "f3beef6e-3086-4a29-af35-b45f5d693504",
+      "maxSize": 6,
+      "name": ""
+    }
+  ]
+}
