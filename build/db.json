@@ -1,0 +1,113 @@
+{
+  "colors": [
+    "RED",
+    "BLUE",
+    "GREEN",
+    "YELLOW",
+    "BLACK"
+  ],
+  "stars": [
+    {
+      "color": "YELLOW",
+      "id": 321,
+      "name": "HE 0437-5439",
+      "universeId": 333
+    },
+    {
+      "color": "BLACK",
+      "id": 322,
+      "name": "HD 140283",
+      "universeId": 444
+    },
+    {
+      "color": "BLUE",
+      "id": 345,
+      "name": "Przybylski's Star",
+      "universeId": 333
+    },
+    {
+      "color": "YELLOW",
+      "id": 234,
+      "name": "Tabby's Star",
+      "universeId": 333
+    },
+    {
+      "color": "GREEN",
+      "id": 543,
+      "name": "PSR J1719-1438b",
+      "universeId": 444
+    },
+    {
+      "color": "BLACK",
+      "id": 544,
+      "name": "MIRA",
+      "universeId": 444
+    },
+    {
+      "color": "GREEN",
+      "id": 545,
+      "name": "EBLM J0555-57Ab",
+      "universeId": 444
+    },
+    {
+      "color": "RED",
+      "name": "Vega",
+      "universeId": "f5ffe578-cfae-4feb-be6e-2a55617ae0da",
+      "id": 546
+    },
+    {
+      "color": "GREEN",
+      "name": "Draco Perseus",
+      "universeId": "f5ffe578-cfae-4feb-be6e-2a55617ae0da",
+      "id": 547
+    },
+    {
+      "color": "RED",
+      "name": "CTW 08I",
+      "universeId": "f5ffe578-cfae-4feb-be6e-2a55617ae0da",
+      "id": 548
+    }
+  ],
+  "universes": [
+    {
+      "id": 333,
+      "maxSize": 3,
+      "name": "Big universe"
+    },
+    {
+      "id": 444,
+      "maxSize": 4,
+      "name": "Circinus"
+    },
+    {
+      "id": "2bcd72ff-e580-41d9-95a1-5b8d49f0b14e",
+      "maxSize": 4,
+      "name": "Muitiverse"
+    },
+    {
+      "id": "f5ffe578-cfae-4feb-be6e-2a55617ae0da",
+      "maxSize": 4,
+      "name": "Ponyoverse"
+    },
+    {
+      "maxSize": 2,
+      "name": "Lynx Universe",
+      "id": 445
+    },
+    {
+      "maxSize": 8,
+      "name": " Butterfly Universe",
+      "id": 446
+    },
+    {
+      "maxSize": 4,
+      "name": "Zephyrus Cloud",
+      "id": 447
+    },
+    {
+      "maxSize": 2,
+      "name": "Cat's Ear Galaxy",
+      "id": 448
+    }
+  ]
+}

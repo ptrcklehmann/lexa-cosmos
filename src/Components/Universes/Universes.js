@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid';
 import useFetch from '../../Api/useFetch'
 import { Button, MenuItem, SwipeableDrawer, TextField, Typography } from '@material-ui/core';
-import ReactPaginate from 'react-paginate';
 import UniverseDetails from './UniverseDetails'
 import { makeStyles } from '@material-ui/styles';
 import Color from 'color';
