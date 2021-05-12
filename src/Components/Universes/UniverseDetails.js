@@ -36,7 +36,7 @@ export default function UniverseDetails(props) {
     const universe = props.info
     const [expanded, setExpanded] = useState(false)
     const { loading, data } = useFetch('http://localhost:4242/stars')
-    const [tabValue, setTabValue] = useState('1');
+    const [tabValue, setTabValue] = useState('1')
 
     const [newStar, setNewStar] = useState({
         color: 'RED',
@@ -63,7 +63,6 @@ export default function UniverseDetails(props) {
         setTabValue(newValue)
     }
     return (
-        <>
             <Card style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -84,17 +83,14 @@ export default function UniverseDetails(props) {
                                 <List>
                                     {data && (data.map(star =>
                                         (star.universeId === universe.id) && (
-                                        
                                         <ListItem key={star.id}>
                                             <ListItemIcon>
                                                 <StarsOutlined className={classes.root} />
                                             </ListItemIcon>
                                             <ListItemText primary={star.name} />
                                         </ListItem>
-                                        
                                         )))}
                                 </List>
-                                {data && <Typography color="textSecondary">No Stars yet 🥺</Typography>}
                             </TabPanel>
                             <TabPanel value="2">
                                 <form className={classes.form} validate='true' autoComplete="off">
@@ -125,6 +121,5 @@ export default function UniverseDetails(props) {
                 </CardActions>
                 </CardContent>
         </Card>
-        </>
     )
 }

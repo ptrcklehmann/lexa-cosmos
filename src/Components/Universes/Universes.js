@@ -80,7 +80,6 @@ export default function Universes({ fetchUrl }) {
     const toggleDrawer = (open) => (event) => {
         setState(open);
     }
-
     const form = () => {
         const handleChange = (event) => {
             setNewUniverse({
@@ -88,7 +87,6 @@ export default function Universes({ fetchUrl }) {
                 [event.target.name]: event.target.value,
             })
         }
-
         return (
             <div className={classes.drawer}>
                 <Typography variant="h5" color="textSecondary" >Add new Universe</Typography>
@@ -116,12 +114,11 @@ export default function Universes({ fetchUrl }) {
         )
     };
     return (
-        <>
-            <div className={classes.root}>
+        <div className={classes.root}>
             <Grid container spacing={4}>
                 <Grid item xs={12}>
                     <Typography variant='h4' component="h2">
-                    🟣 Universes | <Button onClick={toggleDrawer(true)} style={{color: '#6411ad'}}>Create New</Button>
+                        🟣 Universes | <Button onClick={toggleDrawer(true)} style={{ color: '#6411ad' }}>Create New</Button>
                     </Typography>
                 </Grid>
                 {data != null
@@ -131,10 +128,9 @@ export default function Universes({ fetchUrl }) {
                         </Grid>
                     ))}
             </Grid>
-            <SwipeableDrawer className={classes.drawer}anchor='top' open={drawerState} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
+            <SwipeableDrawer className={classes.drawer} anchor='top' open={drawerState} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
                 {form()}
             </SwipeableDrawer>
-            </div>
-        </>
+        </div>
     )
 }
