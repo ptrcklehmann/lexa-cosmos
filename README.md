@@ -1,5 +1,7 @@
 # lexa-cosmos
 
+![lexa-cosmos](https://github.com/ptrcklehmann/lexa-cosmos/blob/main/public/logo.png?raw=true)
+
 ## Tasks resolutions: 
 => Imprint page.
 
@@ -25,5 +27,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-![lexa-cosmos](https://lexa-cosmos.netlify.app/static/media/logo.f7a0ce2b.svg)
