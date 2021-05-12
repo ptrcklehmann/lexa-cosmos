@@ -5,7 +5,9 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import DeleteIcon from '@material-ui/icons/Delete';
 import Color from 'color';
+import axios from 'axios'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,29 +36,30 @@ const useStyles = makeStyles((theme) => ({
 export default function StarCard(props) {
     const star = props.info
     const classes = useStyles(props.info);
+
+    const deleteStar = async (e) => {
+        e.preventDefault()
+        await axios.delete(`http://localhost:4242/stars/${star.id}`)
+    }
     return (
-<>
         <Card className={classes.root}>
             <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                <Typography variant="caption" gutterBottom>
                     Star
                 </Typography>
                 <Typography variant="h5" component="h2">
                     {star.name}
                 </Typography>
-                <Typography className={classes.pos} color="textSecondary" >
+                <Typography  variant="body">
                     {star.color}
                 </Typography>
-                <Typography variant="body2" className={classes.bgColor} component="p">
+                <Typography variant="body2"component="p">
                     id: {star.id}
-                    <br />
-                    Universe id: {star.universeId}
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small" onClick={deleteStar}><DeleteIcon style={{color: star.color === 'BLACK' && '#fafafa'}} /></Button>
             </CardActions>
         </Card>
-        </>
     )
 }

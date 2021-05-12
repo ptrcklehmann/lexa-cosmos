@@ -1,38 +1,39 @@
 import { Grid, Typography } from '@material-ui/core';
-import React, { useEffect, useState } from 'react'
-// import {instance} from '../../Api/axios'
+import React from 'react'
 import StarCard from './StarCard';
-import { StarsOutlined } from '@material-ui/icons';
-// import {instance} from '../../Api/axios'
-import axios from 'axios'
-export const instance = axios.create({
-    baseURL: 'http://localhost:2121/',
-})
+import useFetch from '../../Api/useFetch'
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        '& > *': {
+            margin: theme.spacing(1),
+            height: theme.spacing(5),
+        },
+    },
+}))
+
 export default function Stars({ fetchUrl }) {
-    const [stars, setStars] = useState([])
-
-    useEffect(() => {
-        async function fetchData() {
-            const request = await instance.get(fetchUrl)
-            setStars(request.data)
-            return request
-        }
-        fetchData()
-    }, [fetchUrl])
-
+    const { loading, data } = useFetch(fetchUrl)
+    const classes = useStyles()
     return (
-        <>
-           <Typography variant="h4" component="h2">
-                Stars
-                </Typography>
+        <div className={classes.root}>
             <Grid container spacing={4}>
-                {stars != null
-                    && Object.values(stars).map((star) => (
+            <Grid item xs={12}>
+                <Typography variant="h4" component="h2">
+                   🌌 Stars
+                </Typography>
+            </Grid>
+                {loading && (<Typography>Loading...</Typography>)}
+                {data != null
+                    && Object.values(data).map((star) => (
                         <Grid item xs={12} md={3} sm={6} key={star.id}>
                             <StarCard info={star} />
                         </Grid>
                     ))}
-            </Grid> 
-        </>
+            </Grid>
+        </div>
     )
 }

@@ -4,7 +4,7 @@ import { TabContext } from '@material-ui/lab'
 import Header from './Header/Header';
 import Container from './Container/Container';
 import { ThemeProvider } from '@material-ui/styles';
-import { CssBaseline, Switch } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 import '../Styles/scss/style.scss'
 import { themeSchema } from '../Styles/themeOptions'
 
