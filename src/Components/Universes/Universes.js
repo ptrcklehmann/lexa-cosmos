@@ -1,40 +1,58 @@
-import React, { createContext, useState } from 'react'
+import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid';
 import useFetch from '../../Api/useFetch'
-import { Backdrop, Button, Card, CardActions, CardContent, Divider, Fade, MenuItem, Modal, SwipeableDrawer, TextField, Typography } from '@material-ui/core';
+import { Button, Divider, MenuItem, SwipeableDrawer, TextField, Typography } from '@material-ui/core';
 import UniverseDetails from './UniverseDetails'
-import { v4 as uuidv4 } from 'uuid';
 import { makeStyles } from '@material-ui/styles';
+import Color from 'color';
 import axios from 'axios'
 
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        flexGrow: 1,
         '& > *': {
             margin: theme.spacing(1),
-
+            height: theme.spacing(5),
         },
     },
     title: {
         paddingBottom: '1rem',
     },
+    card: {
+        boxShadow: 'none',
+        '&:hover': {
+            transform: 'scale(1.05)',
+            boxShadow: `0 6px 12px 0 ${Color('#252422')
+                .rotate(-12)
+                .darken(0.2)
+                .fade(0.5)}`,
+        },
+        transition: '0.2s',
+    },
     drawer: {
         padding: '1rem',
-        height: 150,
+        height: 450,
         display: 'flex',
-        flexWrap: 'wrap',
+        flexDirection: 'column',
+        flexWrap: 'nowrap',
+        justifyContent: 'space-around',
+        alignContent: 'stretch',
+        alignItems: 'stretch',
+
     },
     newUniverse: {
         width: '100%',
         fontWeight: 500
     },
     form: {
-        display: 'flex',
+        isplay: 'flex',
+        flexDirection: 'column',
         flexWrap: 'wrap',
-        height: 100,
-        padding: 1 + 'rem'
+        justifyContent: 'space-around',
+        alignContent: 'stretch',
+        alignItems: 'stretch',
+        height: 200,
     },
     textField: {
         marginLeft: theme.spacing(1),
@@ -72,8 +90,8 @@ export default function Universes({ fetchUrl }) {
         }
 
         return (
-            <div role="presentation" >
-                <Typography> Add new Universe</Typography>
+            <div className={classes.drawer}>
+                <Typography variant="h5" color="textSecondary" >Add new Universe</Typography>
                 <br />
                 <form className={classes.form} validate='true' autoComplete="off">
                     <TextField className={classes.textField} label="Name" name="name" onChange={handleChange} required />
@@ -92,21 +110,18 @@ export default function Universes({ fetchUrl }) {
                             </MenuItem>
                         ))}
                     </TextField>
-                    <Button variant="contained" onClick={addNewUniverse}>Save</Button>
+                    <Button onClick={addNewUniverse}>Save</Button>
                 </form>
             </div>
         )
     };
     return (
-        <div className={classes.root}>
-            <SwipeableDrawer anchor='top' open={drawerState} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
-                {form()}
-            </SwipeableDrawer>
-            <Divider variant="middle" />
-            <Grid container spacing={3}>
+        <>
+            <div className={classes.root}>
+            <Grid container spacing={4}>
                 <Grid item xs={12}>
                     <Typography variant='h4' component="h2">
-                        Universes  <Button variant="contained" onClick={toggleDrawer(true)}>Create New</Button>
+                    🟣 Universes | <Button onClick={toggleDrawer(true)} style={{color: '#6411ad'}}>Create New</Button>
                     </Typography>
                 </Grid>
                 {data != null
@@ -116,6 +131,10 @@ export default function Universes({ fetchUrl }) {
                         </Grid>
                     ))}
             </Grid>
-        </div>
+            <SwipeableDrawer className={classes.drawer}anchor='top' open={drawerState} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
+                {form()}
+            </SwipeableDrawer>
+            </div>
+        </>
     )
 }

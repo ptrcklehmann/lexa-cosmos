@@ -4,36 +4,38 @@ const lightTheme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      main: '#77FF00',
+      main: '#6411ad',
     },
     secondary: {
-      main: '#77FF00',
+      main: '#d0bfff',
     },
     background: {
-      default: '#f0efeb',
-      paper: '#f8f9fa',
+      default: '#fafafa',
+      paper: '#F5F5F5',
     },
     text: {
       primary: '#183642',
-      secondary: '#001845',
+      secondary: '#6411ad',
     },
   },
+  
   typography: {
     subtitle1: {
-      fontFamily: 'Inter',
+      fontFamily: 'Nunito',
     },
     button: {
-      fontFamily: 'Inter',
+      fontFamily: 'Nunito',
+      fontWeight: 'bold',
     },
-    fontFamily: 'Inter',
+    fontFamily: 'Nunito',
     overline: {
-      fontFamily: 'Inter',
+      fontFamily: 'Nunito',
     },
     caption: {
-      fontFamily: 'Inter',
+      fontFamily: 'Nunito',
     },
     h5: {
-      fontFamily: 'Inter',
+      fontFamily: 'Nunito',
     },
     h4: {
       fontWeight: 400,
@@ -42,12 +44,13 @@ const lightTheme = createMuiTheme({
       fontWeight: 500,
     },
   },
+
   props: {
     MuiAppBar: {
       color: 'transparent',
     },
   },
-  spacing: 8,
+  // spacing: 8,
 })
 
 const darkTheme = createMuiTheme({

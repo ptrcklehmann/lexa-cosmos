@@ -3,7 +3,6 @@ import axios from 'axios'
 import { Button, Collapse, List, Tab, ListItem, ListItemIcon, ListItemText, Typography, Card, CardActions, CardContent, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Grid } from '@material-ui/core'
 import { StarsOutlined } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles';
-import { v4 as uuidv4 } from 'uuid';
 import useFetch from '../../Api/useFetch'
 import { TabPanel, TabList, TabContext } from '@material-ui/lab'
 
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2, 4, 3),
     },
     indicator: {
-        backgroundColor: '#77FF00',
+        backgroundColor: '#6411ad',
     }
 }));
 
@@ -36,7 +35,7 @@ export default function UniverseDetails(props) {
     const classes = useStyles(props.info)
     const universe = props.info
     const [expanded, setExpanded] = useState(false)
-    const { loading, data } = useFetch('http://localhost:8000/stars')
+    const { loading, data } = useFetch('http://localhost:4242/stars')
     const [tabValue, setTabValue] = useState('1');
 
     const [newStar, setNewStar] = useState({
@@ -51,7 +50,7 @@ export default function UniverseDetails(props) {
 
     const addNewStar = async (e) => {
         e.preventDefault()
-        await axios.post('http://localhost:8000/stars', newStar).catch(err => console.log('error', err))
+        await axios.post('http://localhost:4242/stars', newStar).catch(err => console.log('error', err))
     }
 
     const handleChange = (event) => {

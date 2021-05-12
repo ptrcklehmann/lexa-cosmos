@@ -1,20 +1,29 @@
+import { makeStyles } from '@material-ui/core'
 import { TabPanel } from '@material-ui/lab'
 import React, { createContext } from 'react'
-import Stars from '../Universes/Stars/Stars'
+import Imprint from '../Imprint/Imprint'
+import Stars from '../Stars/Stars'
 import Universes from '../Universes/Universes'
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: 0,
+
+    },
+}))
+
 export default function Container() {
+    const classes = useStyles()
     return (
         <>
             <TabPanel value="1">
-                <Universes fetchUrl='http://localhost:8000/universes' />
+                <Universes fetchUrl='http://localhost:4242/universes' />
             </TabPanel>
             <TabPanel value="2">
-                <Stars fetchUrl='http://localhost:8000/stars' />
+                <Stars fetchUrl='http://localhost:4242/stars' />
             </TabPanel>
             <TabPanel value="3">
-                Imprint
-                {/* <Imprint fetchUrl='/imprint' /> */}
+                <Imprint />
             </TabPanel>
         </>
     )

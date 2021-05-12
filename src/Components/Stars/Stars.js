@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@material-ui/core';
-import React, { createContext } from 'react'
+import React from 'react'
 import StarCard from './StarCard';
-import useFetch from '../../../Api/useFetch'
+import useFetch from '../../Api/useFetch'
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,11 +20,10 @@ export default function Stars({ fetchUrl }) {
     const classes = useStyles()
     return (
         <div className={classes.root}>
-                
             <Grid container spacing={4}>
             <Grid item xs={12}>
                 <Typography variant="h4" component="h2">
-                    Stars
+                   🌌 Stars
                 </Typography>
             </Grid>
                 {loading && (<Typography>Loading...</Typography>)}

@@ -39,7 +39,7 @@ export default function StarCard(props) {
 
     const deleteStar = async (e) => {
         e.preventDefault()
-        await axios.delete(`http://localhost:8000/stars/${star.id}`)
+        await axios.delete(`http://localhost:4242/stars/${star.id}`)
     }
     return (
         <Card className={classes.root}>
@@ -58,7 +58,7 @@ export default function StarCard(props) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" onClick={deleteStar}><DeleteIcon /></Button>
+                <Button size="small" onClick={deleteStar}><DeleteIcon style={{color: star.color === 'BLACK' && '#fafafa'}} /></Button>
             </CardActions>
         </Card>
     )
