@@ -8,12 +8,6 @@
   ],
   "stars": [
     {
-      "color": "RED",
-      "id": 123,
-      "name": "Vega",
-      "universeId": 333
-    },
-    {
       "color": "YELLOW",
       "id": 321,
       "name": "HE 0437-5439",
@@ -54,6 +48,12 @@
       "id": 545,
       "name": "EBLM J0555-57Ab",
       "universeId": 444
+    },
+    {
+      "color": "RED",
+      "name": "Vega",
+      "universeId": "f5ffe578-cfae-4feb-be6e-2a55617ae0da",
+      "id": 546
     }
   ],
   "universes": [
@@ -73,11 +73,6 @@
       "name": "Muitiverse"
     },
     {
-      "id": "c0cf52b8-ab03-4382-b389-f1849d280208",
-      "maxSize": 2,
-      "name": ""
-    },
-    {
       "id": "48ce2ea2-6ed0-4575-a6db-ca88a823935f",
       "maxSize": 5,
       "name": "sfddf"
@@ -88,34 +83,9 @@
       "name": "Belloverse"
     },
     {
-      "id": "10d8b99f-d88b-4462-84f9-5e50f1af359f",
-      "maxSize": 1,
-      "name": ""
-    },
-    {
-      "id": "b32a2340-1852-4477-9224-4f154fc55b2a",
-      "maxSize": 1,
-      "name": ""
-    },
-    {
-      "id": "afaf0428-1b69-462f-b118-d58d84ee330a",
-      "maxSize": 1,
-      "name": ""
-    },
-    {
-      "id": "36508304-9207-49fc-8e71-595b66a67f04",
-      "maxSize": 1,
-      "name": ""
-    },
-    {
       "id": "c2994a90-5a4f-43ca-9d66-f65fcd4c2725",
       "maxSize": 2,
       "name": "#ÄOpop"
-    },
-    {
-      "id": "a4252466-6a45-444c-8c61-3f1890927745",
-      "maxSize": 1,
-      "name": ""
     },
     {
       "id": "b1c5f02c-149f-444b-b833-922a1ec9f823",
@@ -128,9 +98,9 @@
       "name": "Ponyo"
     },
     {
-      "id": "f3beef6e-3086-4a29-af35-b45f5d693504",
-      "maxSize": 6,
-      "name": ""
+      "id": "f5ffe578-cfae-4feb-be6e-2a55617ae0da",
+      "maxSize": 4,
+      "name": "Ponyoverse"
     }
   ]
 }

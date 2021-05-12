@@ -1,16 +1,16 @@
 import { TabPanel } from '@material-ui/lab'
-import React from 'react'
-import Stars from '../Stars/Stars'
+import React, { createContext } from 'react'
+import Stars from '../Universes/Stars/Stars'
 import Universes from '../Universes/Universes'
 
 export default function Container() {
     return (
         <>
             <TabPanel value="1">
-                    <Universes fetchUrl='http://localhost:2121/' />
+                <Universes fetchUrl='http://localhost:8000/universes' />
             </TabPanel>
             <TabPanel value="2">
-                    <Stars fetchUrl='stars' />
+                <Stars fetchUrl='http://localhost:8000/stars' />
             </TabPanel>
             <TabPanel value="3">
                 Imprint

@@ -9,21 +9,21 @@ const useFetch = (url, initialValue) => {
         const fetchData = async function () {
             try {
                 setLoading(true);
-                const response = await axios.get(url);
-                if (response.status === 200  || response.status === 304) {
-                    console.log(response.data)
+                const response = await axios.get(url)
+                if (response.status === 200 || response.status === 304) {
                     setData(response.data);
                 }
-            } catch (error) {
-                throw error;
+            } catch (err) {
+                console.log('error', err)
+                throw err
             } finally {
-                setLoading(false);
+                (setLoading(false))
             }
+
         };
         fetchData();
     }, [url]);
-    console.log(data)
-    return { loading, data }  ;
+    return { loading, data };
 };
 
 export default useFetch;
