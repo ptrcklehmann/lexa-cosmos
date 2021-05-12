@@ -2,7 +2,7 @@ import React from 'react'
 import { TabList } from '@material-ui/lab'
 import { AppBar, Avatar, Tab } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import logo from './lexa-logo.svg'
+import logo from './logo.svg'
 
 const useStyles = makeStyles(() => ({
     root: {
