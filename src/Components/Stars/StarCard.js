@@ -12,18 +12,17 @@ import axios from 'axios'
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: (props) =>
-            props.color === 'RED' ? '#EF2E10' :
-                props.color === 'BLUE' ? '#64DFDF' :
-                    props.color === 'GREEN' ? '#9EF01A' :
-                        props.color === 'YELLOW' ? '#FFD60A' :
-                            props.color === 'BLACK' && '#252422',
+            props.color === 'RED' ? '#e01e37' :
+                props.color === 'BLUE' ? '#90e0ef' :
+                    props.color === 'GREEN' ? '#7dd181' :
+                        props.color === 'YELLOW' ? '#ffee32' :
+                            props.color === 'BLACK' && '#011627',
         minWidth: 275,
         color: (props) => props.color === 'BLACK' && '#F6F5F3',
-
         boxShadow: 'none',
         '&:hover': {
             transform: 'scale(1.05)',
-            boxShadow: `0 6px 12px 0 ${Color('#252422')
+            boxShadow: `0 6px 12px 0 ${Color('#011627')
                 .rotate(-12)
                 .darken(0.2)
                 .fade(0.5)}`,

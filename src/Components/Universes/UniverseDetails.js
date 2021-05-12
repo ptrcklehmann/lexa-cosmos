@@ -5,6 +5,7 @@ import { StarsOutlined } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles';
 import useFetch from '../../Api/useFetch'
 import { TabPanel, TabList, TabContext } from '@material-ui/lab'
+import Color from 'color';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,6 +15,18 @@ const useStyles = makeStyles((theme) => ({
                     props.color === 'GREEN' ? '#9EF01A' :
                         props.color === 'YELLOW' ? '#FFD60A' :
                             props.color === 'BLACK' && '#252422',
+    },
+    card: {
+        border: '1 px solid #183642',
+        boxShadow: 'none',
+        '&:hover': {
+            transform: 'scale(1.05)',
+            boxShadow: `0 6px 12px 0 ${Color('#011627')
+                .rotate(-5)
+                .darken(0.2)
+                .fade(0.5)}`,
+        },
+        transition: '0.2s',
     },
     modal: {
         display: 'flex',
@@ -49,6 +62,7 @@ export default function UniverseDetails(props) {
     }
 
     const addNewStar = async (e) => {
+        e.stopPropagation()
         e.preventDefault()
         await axios.post('http://localhost:4242/stars', newStar).catch(err => console.log('error', err))
     }
@@ -63,7 +77,9 @@ export default function UniverseDetails(props) {
         setTabValue(newValue)
     }
     return (
+
             <Card style={{
+            <Card className={classes.card}style={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'stretch',
@@ -108,7 +124,7 @@ export default function UniverseDetails(props) {
                                                 <FormControlLabel value="YELLOW" control={<Radio />} label="Yellow" />
                                                 <FormControlLabel value="BLACK" control={<Radio />} label="Black" />
                                             </RadioGroup>
-                                            <Button variant="contained" onClick={addNewStar}>Save</Button>
+                                            <Button onClick={addNewStar}>Save</Button>
                                         </FormControl>
                                     </Grid>
                                     </Grid>
