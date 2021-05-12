@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid';
 import useFetch from '../../Api/useFetch'
-import { Button, Divider, MenuItem, SwipeableDrawer, TextField, Typography } from '@material-ui/core';
+import { Button, MenuItem, SwipeableDrawer, TextField, Typography } from '@material-ui/core';
+import ReactPaginate from 'react-paginate';
 import UniverseDetails from './UniverseDetails'
 import { makeStyles } from '@material-ui/styles';
 import Color from 'color';
@@ -61,18 +62,17 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+
 export default function Universes({ fetchUrl }) {
     const { loading, data } = useFetch(fetchUrl)
-
     const [drawerState, setState] = useState(false);
-
     const classes = useStyles();
 
     const [newUniverse, setNewUniverse] = useState({
         maxSize: 0,
         name: ''
     })
-
+    
     const addNewUniverse = async (e) => {
         e.preventDefault()
         await axios.post(fetchUrl, newUniverse).catch(err => console.log('error', err))
@@ -88,7 +88,6 @@ export default function Universes({ fetchUrl }) {
                 [event.target.name]: event.target.value,
             })
         }
-
         return (
             <div className={classes.drawer}>
                 <Typography variant="h5" color="textSecondary" >Add new Universe</Typography>
@@ -118,22 +117,22 @@ export default function Universes({ fetchUrl }) {
     return (
         <>
             <div className={classes.root}>
-            <Grid container spacing={4}>
-                <Grid item xs={12}>
-                    <Typography variant='h4' component="h2">
-                    🟣 Universes | <Button onClick={toggleDrawer(true)} style={{color: '#6411ad'}}>Create New</Button>
-                    </Typography>
+                <Grid container spacing={4}>
+                    <Grid item xs={12}>
+                        <Typography variant='h4' component="h2">
+                            🟣 Universes | <Button onClick={toggleDrawer(true)} style={{ color: '#6411ad' }}>Create New</Button>
+                        </Typography>
+                    </Grid>
+                    {data != null
+                        && Object.values(data).map((universe) => (
+                            <Grid item xs={12} md={6} sm={6} key={universe.id}>
+                                <UniverseDetails info={universe} />
+                            </Grid>
+                        ))}
                 </Grid>
-                {data != null
-                    && Object.values(data).map((universe) => (
-                        <Grid item xs={12} md={6} sm={6} key={universe.id}>
-                            <UniverseDetails info={universe} />
-                        </Grid>
-                    ))}
-            </Grid>
-            <SwipeableDrawer className={classes.drawer}anchor='top' open={drawerState} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
-                {form()}
-            </SwipeableDrawer>
+                <SwipeableDrawer className={classes.drawer} anchor='top' open={drawerState} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
+                    {form()}
+                </SwipeableDrawer>
             </div>
         </>
     )
