@@ -5,8 +5,8 @@
 ## Tasks resolutions: 
 => Imprint page.
 
-# Getting Started
-## Available Scripts
+## Getting Started
+### Available Scripts
 
 In the project directory, you can run:
 
