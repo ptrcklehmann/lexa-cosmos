@@ -1,7 +1,7 @@
 # lexa-cosmos
 
 ## Tasks resolutions: 
-Checkout the Imprint page!
+=> Imprint page.
 
 # Getting Started
 ## Available Scripts
