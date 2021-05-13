@@ -38,7 +38,7 @@ export default function StarCard(props) {
 
     const deleteStar = async (e) => {
         e.preventDefault()
-        await axios.delete(`http://localhost:4242/stars/${star.id}`)
+        await axios.delete(`https://api.jsonbin.io/b/609c4f9473bb7e4ee41ca7da/${star.id}`)
     }
     return (
         <Card className={classes.root}>
