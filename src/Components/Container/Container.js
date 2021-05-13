@@ -5,15 +5,7 @@ import Imprint from '../Imprint/Imprint'
 import Stars from '../Stars/Stars'
 import Universes from '../Universes/Universes'
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        padding: 0,
-
-    },
-}))
-
 export default function Container() {
-    const classes = useStyles()
     return (
         <>
             <TabPanel value="1">
