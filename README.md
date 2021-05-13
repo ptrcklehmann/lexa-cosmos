@@ -1,10 +1,12 @@
 # lexa-cosmos
 
-## Tasks resolutions: 
-Checkout the Imprint page!
+![lexa-cosmos](https://github.com/ptrcklehmann/lexa-cosmos/blob/main/public/logo.png?raw=true)
 
-# Getting Started
-## Available Scripts
+## Tasks resolutions: 
+=> Imprint page.
+
+## Getting Started
+### Available Scripts
 
 In the project directory, you can run:
 
