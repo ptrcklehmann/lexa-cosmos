@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react'
+import axios from 'axios'
 import {
   Button,
   Collapse,
@@ -19,13 +19,13 @@ import {
   RadioGroup,
   FormControlLabel,
   Radio,
-  Grid,
-} from '@material-ui/core';
-import { StarsOutlined } from '@material-ui/icons';
-import { makeStyles } from '@material-ui/styles';
-import useFetch from '../../Api/useFetch';
-import { TabPanel, TabList, TabContext } from '@material-ui/lab';
-import Color from 'color';
+  Grid
+} from '@material-ui/core'
+import { StarsOutlined } from '@material-ui/icons'
+import { makeStyles } from '@material-ui/styles'
+import useFetch from '../../Api/useFetch'
+import { TabPanel, TabList, TabContext } from '@material-ui/lab'
+import Color from 'color'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,42 +33,42 @@ const useStyles = makeStyles((theme) => ({
       props.color === 'RED'
         ? '#EF2E10'
         : props.color === 'BLUE'
-        ? '#64DFDF'
-        : props.color === 'GREEN'
-        ? '#9EF01A'
-        : props.color === 'YELLOW'
-        ? '#FFD60A'
-        : props.color === 'BLACK' && '#252422',
+          ? '#64DFDF'
+          : props.color === 'GREEN'
+            ? '#9EF01A'
+            : props.color === 'YELLOW'
+              ? '#FFD60A'
+              : props.color === 'BLACK' && '#252422'
   },
   card: {
     border: '1 px solid #183642',
     boxShadow: 'none',
     '&:hover': {
       transform: 'scale(1.05)',
-      boxShadow: `0 6px 12px 0 ${Color('#011627')
+      boxShadow: `0 6px 12px 0 ${Color('#252422')
         .rotate(-5)
         .darken(0.2)
-        .fade(0.5)}`,
+        .fade(0.5)}`
     },
-    transition: '0.2s',
+    transition: '0.2s'
   },
   modal: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: '2px solid #252422',
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+    padding: theme.spacing(2, 4, 3)
   },
   indicator: {
-    backgroundColor: '#6411ad',
+    backgroundColor: '#6411ad'
   },
-}));
+}))
 
-export default function UniverseDetails(props) {
+export default function UniverseDetails (props) {
   const classes = useStyles(props.info)
   const universe = props.info
   const [expanded, setExpanded] = useState(false)
