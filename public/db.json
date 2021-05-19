@@ -66,6 +66,12 @@
       "name": "CTW 08I",
       "universeId": "f5ffe578-cfae-4feb-be6e-2a55617ae0da",
       "id": 548
+    },
+    {
+      "color": "BLUE",
+      "name": "Polaris",
+      "universeId": "2bcd72ff-e580-41d9-95a1-5b8d49f0b14e",
+      "id": 549
     }
   ],
   "universes": [

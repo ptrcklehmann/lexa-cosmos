@@ -1,6 +1,5 @@
-import { makeStyles } from '@material-ui/core'
 import { TabPanel } from '@material-ui/lab'
-import React, { createContext } from 'react'
+import React from 'react'
 import Imprint from '../Imprint/Imprint'
 import Stars from '../Stars/Stars'
 import Universes from '../Universes/Universes'
